@@ -1,0 +1,13 @@
+
+.main-nav
+{
+    background: url("../../assets/img/bg.png") center center/cover no-repeat;
+   
+    color: white;
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center
+}
