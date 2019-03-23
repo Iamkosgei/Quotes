@@ -22,7 +22,7 @@
                                 <button type="button" class="btn btn-sm btn-outline-danger"
                                     (click)='deleteQuote(i)'>DELETE</button>
                             </div>
-                            <small class="text-muted">{{quote.datePosted | date }}</small>
+                            <small class="text-muted">{{quote.datePosted | dateCount }}</small>
                         </div>
                         <hr>
                         <app-quote-details *ngIf='quote.showDescription' [quote]="quote"

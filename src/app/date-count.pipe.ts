@@ -5,42 +5,23 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(inputDate:string):string{
+  transform(inputDate:Date):any{
 
-    let current = new Date().valueOf(); // get the current date 
-    var input = new Date(parseInt(inputDate)).valueOf();
-    var msPerMinute = 60 * 1000;
-    var msPerHour = msPerMinute * 60;
-    var msPerDay = msPerHour * 24;
-    var msPerMonth = msPerDay * 30;
-    var msPerYear = msPerDay * 365;
+        let input:any = inputDate;
 
-    var elapsed = current - input;
+        let currentDate:any = new Date();
 
-    if (elapsed < msPerMinute) {
-        return Math.round(elapsed / 1000) + ' seconds ago';
-    }
 
-    else if (elapsed < msPerHour) {
-        return Math.round(elapsed / msPerMinute) + ' minutes ago';
-    }
+        let elapsed = Math.round(Math.abs(currentDate - input) / (1000*60*60*24)); // Time difference in days
 
-    else if (elapsed < msPerDay) {
-        return Math.round(elapsed / msPerHour) + ' hours ago';
-    }
+        if(elapsed <= 0)
+        {
+            return "posted today"
+        }
+        else{
+            return `posted ${elapsed} days ago`
+        }
 
-    else if (elapsed < msPerMonth) {
-        return  Math.round(elapsed / msPerDay) + ' days ago';
-    }
-
-    else if (elapsed < msPerYear) {
-        return Math.round(elapsed / msPerMonth) + ' months ago';
-    }
-
-    else {
-        console.log('inside the if condition', elapsed);
-        return Math.round(elapsed / msPerYear) + ' years ago';
-    }
-
+       
     }
   }
