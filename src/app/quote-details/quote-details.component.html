@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between align-items-center">
+  <div>
+    <p>Author: {{quote.author }}</p>
+    <p>Posted By: {{quote.postedBy}} </p>
+  </div>
+  <div class="btn-group-vertical">
+    <button type="button" class="btn btn-sm btn-outline-success">
+      <i class="far fa-thumbs-up" (click) = 'upVote()' > {{ quote.upVote }}</i></button>
+    <button type="button" class="btn btn-sm btn-outline-danger">
+      <i class="far fa-thumbs-down" (click) = 'downVote()'>{{ quote.downVote }}</i></button>
+  </div>
+</div>
