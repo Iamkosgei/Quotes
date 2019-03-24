@@ -74,6 +74,15 @@ export class QuoteComponent implements OnInit {
   return mostUpVotedQuoteIndex;
   }
 
+  addNewQuote(quote)
+  {
+    let quoteLength = this.quotes.length;
+    quote.id=quoteLength+1; //increment its id
+
+    this.quotes.push(quote)
+
+  }
+
  
   
 }
