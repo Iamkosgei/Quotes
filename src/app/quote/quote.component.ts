@@ -13,18 +13,18 @@ export class QuoteComponent implements OnInit {
 
   quotes = [
     new Quote(1,"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit fugiat alias natus laudantium ex quidem perspiciatis quisquam!",
-    "lorem ipsum", "jane",0,0,new Date(2019,2)
+    "lorem ipsum", "jane",0,0,new Date(2019,2,19)
     ),
     new Quote(2,"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit fugiat alias natus laudantium ex quidem perspiciatis quisquam!",
-    "lorem ipsum", "doe",0,0,new Date()
+    "lorem ipsum", "doe",0,0,new Date(2019,2,3)
     ),
 
     new Quote(3,"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit fugiat alias natus laudantium ex quidem perspiciatis quisquam!",
-    "lorem ipsum", "john",0,0,new Date()
+    "lorem ipsum", "john",0,0,new Date(2019,2,1)
     ),
 
     new Quote(4,"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit fugiat alias natus laudantium ex quidem perspiciatis quisquam!",
-    "lorem ipsum", "doe",2,0,new Date()
+    "lorem ipsum", "doe",2,0,new Date(2019,2,23)
     )
   ]
 

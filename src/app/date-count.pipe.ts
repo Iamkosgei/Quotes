@@ -14,6 +14,8 @@ export class DateCountPipe implements PipeTransform {
 
         let elapsed = Math.round(Math.abs(currentDate - input) / (1000*60*60*24)); // Time difference in days
 
+        console.log(input)
+        
         if(elapsed <= 0)
         {
             return "posted today"
@@ -25,3 +27,4 @@ export class DateCountPipe implements PipeTransform {
        
     }
   }
+
