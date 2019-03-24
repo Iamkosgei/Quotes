@@ -24,7 +24,7 @@ export class QuoteComponent implements OnInit {
     ),
 
     new Quote(4,"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit fugiat alias natus laudantium ex quidem perspiciatis quisquam!",
-    "lorem ipsum", "doe",2,0,new Date(2019,2,23)
+    "lorem ipsum", "doe",0,0,new Date(2019,2,23)
     )
   ]
 
