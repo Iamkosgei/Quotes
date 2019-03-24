@@ -17,7 +17,7 @@ It is a quotes website, where you can view quotes, post your quotes, up vote and
 
 ## How to run it
 
-1. [Live Version](www.google.com)
+1. [Live Version](https://iamkosgei.github.io/Quotes/)
 2. Clone the repo then follow the following instruction
 
 ## Development server
