@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+                <form (ngSubmit)='submitQuote();' #quoteForm='ngForm'>
                     <div class="form-group">
                         <label for="usr">Name:</label>
                         <input [(ngModel)]="newQuote.postedBy" name="name" #name="ngModel" required type="text"
@@ -35,7 +35,7 @@
                                 <p>Please input the author's name</p>
                             </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary"> Submit</button>
                 </form>
             </div>
         </div>

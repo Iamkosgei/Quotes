@@ -5,14 +5,12 @@ import {Quote} from './quote'
   selector: '[appHighligth]'
 })
 
-
 export class HighligthDirective {
-  @Input() name:string;
 
   constructor(private elem:ElementRef) { 
-        this.elem.nativeElement.style.backgroundColor = 'blue';
-        this.elem.nativeElement.style.color = 'white';
-    }
-
+    this.elem.nativeElement.style.backgroundColor = 'blue';
+    this.elem.nativeElement.style.color = 'white';
+    
+     }
   }
 

@@ -14,7 +14,10 @@
             <div class="col-md-4" *ngFor="let quote of quotes ; let i = index">
                 <div class="card mb-4 box-shadow">
                     <div class="card-body">
-                        <p class="card-text" appHighligth>{{ quote.text }} </p>
+                        <p class="card-text" appHighligth *ngIf='i == mostUpVotedIndex()' > <i class="fas fa-quote-left"></i> {{ quote.text }} <i class="fas fa-quote-right"></i> </p>
+                        <p class="card-text"  *ngIf='i != mostUpVotedIndex()' > <i class="fas fa-quote-left"></i> {{ quote.text }} <i class="fas fa-quote-right"></i> </p>
+
+
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-sm btn-outline-success"
@@ -25,7 +28,6 @@
                             <small class="text-muted">{{quote.datePosted | dateCount }}</small>
                         </div>
                         <hr>
-                        
                         <app-quote-details *ngIf='quote.showDescription' [quote]="quote"
                             (upVoteClicked)="upVoteQuote(i)" (downVoteClicked)="downVoteQuote(i)"></app-quote-details>
 
