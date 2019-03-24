@@ -16,6 +16,7 @@ It is a quotes website, where you can view quotes, post your quotes, up vote and
 1. Npm
 
 ## How to run it
+
 1. [Live Version](www.google.com)
 2. Clone the repo then follow the following instruction
 
@@ -39,7 +40,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-# License
+## License
 
 MIT License
 
