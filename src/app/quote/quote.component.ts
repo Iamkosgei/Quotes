@@ -24,9 +24,11 @@ export class QuoteComponent implements OnInit {
     ),
 
     new Quote(4,"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit fugiat alias natus laudantium ex quidem perspiciatis quisquam!",
-    "lorem ipsum", "doe",0,0,new Date()
+    "lorem ipsum", "doe",2,0,new Date()
     )
   ]
+
+  
 
   constructor() {
     
@@ -55,6 +57,23 @@ export class QuoteComponent implements OnInit {
   {
     this.quotes[index].downVote = this.quotes[index].downVote +1;
   }
-  
 
+
+  mostUpVotedIndex():number
+  {
+    let mostVotes:number = 0;
+    let mostUpVotedQuoteIndex;
+
+    for(let i=0; i<this.quotes.length; i++)
+    {
+      if(this.quotes[i].upVote>mostVotes){
+        mostVotes = this.quotes[i].upVote
+        mostUpVotedQuoteIndex = i;
+      }
+    }
+  return mostUpVotedQuoteIndex;
+  }
+
+ 
+  
 }
